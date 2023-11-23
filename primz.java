@@ -7,8 +7,7 @@ public class primz {
 
     public static void main(String[] args) {
         String Primenumbers = "";
-        int i = 0;
-        int num = 0;
+        int lastprime= 0;
         int totalCount = 0;
         String lastnumber= "";
 
@@ -16,11 +15,11 @@ public class primz {
         
 
 
-        for (i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1000; i++) {
             int counter = 0;
 
 
-            for (num = i; num >= 1; num--) {
+            for (int num = i; num >= 1; num--) {
                 if (i % num == 0) {
                     counter +=  1;
 
@@ -33,7 +32,7 @@ public class primz {
                 Primenumbers = Primenumbers + i + " ";
                 totalCount++;
             if(totalCount == 50){
-                lastnumber = lastnumber + i + " ";
+                lastprime =  i;
 
 
             }
@@ -47,6 +46,6 @@ public class primz {
         }
         System.out.println(Primenumbers);
         System.out.println("anzahl der Primzahlen sind : " +totalCount);
-        System.out.println("letzter Primzahl ist ="+lastnumber);
+        System.out.println("letzter Primzahl ist ="+lastprime);
     }
 }
